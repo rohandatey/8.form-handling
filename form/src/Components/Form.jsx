@@ -1,22 +1,24 @@
 import React from "react";
+import {useForm} from "react-hook-form"
 
-const Form = () => {
+const Form = ({handleFormSubmitData}) => {
+const {register,handleSubmit} = useForm()
   return (
     <div className="mt-10 flex justify-center gap-10">
-      <form className="flex gap-10" action="">
-        <input
+      <form className="flex gap-10" onSubmit={handleSubmit(data=>handleFormSubmitData(data))}>
+        <input {...register("name")}
           className="px-2 py-1 border-1 rounded-md text-base font-semibold bg-white outline-none"
           type="text"
           placeholder="name"
         />
 
-        <input
+        <input {...register("email")}
           className="px-2 py-1 border-1 rounded-md text-base font-semibold bg-white outline-none"
           type="text"
           placeholder="email"
         />
 
-        <input
+        <input {...register("image")}
           className="px-2 py-1 border-1 rounded-md text-base font-semibold bg-white outline-none"
           type="text"
           placeholder="image Url"

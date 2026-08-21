@@ -4,11 +4,11 @@ const Card = ({ user }) => {
   return (
     <div className="w-52 h-full bg-zinc-100 rounded-lg flex items-center flex-col p-2">
       <div className="w-[3vw] h-[3vw] rounded-full bg-zinc-300 overflow-hidden">
-        {/* <img className="w-full h-full object-cover" src="" alt="" /> */}
+        <img className="w-full h-full object-cover" src={user.image} alt="" />
       </div>
 
-      <h1 className="text-xl font-semibold mt-1">rohan</h1>
-      <h4 className="text-xs opacity-60">rohan@gmail.com</h4>
+      <h1 className="text-xl font-semibold mt-1">{user.name}</h1>
+      <h4 className="text-xs opacity-60">{user.email}</h4>
 
       <p className="text-center text-sm font-semibold leading-none tracking-tight mt-1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque fuga
